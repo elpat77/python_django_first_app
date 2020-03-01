@@ -47,7 +47,7 @@
 8. Deactivate the project from terminal side, we will start it on VS Code now
     > deactivate 
 
-9. On VS Code  we will now see the project, launch a new terminal inside this project. Note the project will have the prefix (venv)
+9. On VS Code we will now see the project. Launch a new terminal inside this project. Note terminal will have the prefix (venv)
 
 10. cd into the actuall project (notice there will be a todo_app inside todo_app)
     > cd todo_app
