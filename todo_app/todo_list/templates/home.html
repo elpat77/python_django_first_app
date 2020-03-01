@@ -8,18 +8,25 @@
 </head>
 
 <body>
+    <!-- this starts a block  -->
     {% block content %}
 
+    <!-- the posts will be displayed here -->
     <form method="POST">
+        <!-- The CSRF middleware and template tag provides easy-to-use 
+            protection against Cross Site Request Forgeries -->
         {% csrf_token %}
+        <!-- input box and submit button used to enter and submit posts -->
         <input type="text" name="item" placeholder="add todo">
         <button type="submit">Submit</button>
     </form>
+    <!-- opening for block  where the items will be displayed  -->
     {% for todos in todo_list %}
     <h1>{{ todos.item }}</h1>
+    <!-- This will communicate to the delete URL which handles the delete request -->
     <a href="{% url 'delete' todos.id %}">Delete</a>
 
-
+    <!-- end both blocks -->
     {% endfor %}
     {% endblock %}
 </body>
